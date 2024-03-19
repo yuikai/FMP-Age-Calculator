@@ -1,0 +1,123 @@
+@font-face {
+  font-family: 'Poppins';
+  src: url('./assets/fonts/Poppins-Regular.ttf');
+}
+@font-face {
+  font-family: 'PoppinsX';
+  src: url('./assets/fonts/Poppins-ExtraBoldItalic.ttf');
+}
+
+body {
+  background-color: hsl(0, 0%, 86%);
+  font-family: 'Poppins';
+  color: hsl(0, 0%, 8%);
+}
+
+#app {
+  width: 60%;
+  padding: 40px;
+  margin: 50px auto 20px auto;
+  border-radius: 20px;
+  border-bottom-right-radius: 150px;
+  background-color: hsl(0, 0%, 94%);
+}
+
+.form {
+  margin: 0px;
+  padding: 0px;
+  display: flex;
+}
+.form div {
+  width: 22%;
+  margin: 2%;
+}
+.form div h1 {
+  margin: 0px;
+  font-size: .8rem;
+  font-weight: 800;
+}
+
+.normal h1 {
+  color: hsl(0, 1%, 44%);
+}
+.normal input {
+  width: 90%;
+  height: 2.5rem;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 10px;
+  border-radius: 5px;
+  border: 2px solid hsl(0, 0%, 86%);
+
+  font-family: 'Poppins';
+  font-size: 30px;
+  font-weight: 900;
+}
+
+.error h1 {
+  color: hsl(0, 100%, 67%);
+}
+.error input {
+  width: 90%;
+  height: 2.5rem;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 10px;
+  border-radius: 5px;
+  border: 2px solid hsl(0, 100%, 67%);
+
+  font-family: 'Poppins';
+  font-size: 30px;
+  font-weight: 900;
+  color: hsl(0, 100%, 67%);
+}
+
+input:focus {
+  outline: none;
+  border: 2px solid hsl(259, 100%, 65%);
+  color: hsl(0, 0%, 8%);
+}
+
+.error-message {
+  margin: 0px;
+  font-size: 12px;
+  font-style: italic;
+  font-weight: 400;
+  color:hsl(0, 100%, 67%);
+}
+
+.break {
+  display: flex;
+  align-items: center;
+}
+.break label {
+  flex-grow: 1;
+}
+.break label hr {
+  border: 2px solid hsl(0, 0%, 86%);
+}
+.break div {
+  width: 80px;
+  height: 80px;
+  border-radius: 100%;
+  background-color: hsl(259, 100%, 65%);
+  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.break div:hover {
+  background-color: hsl(0, 0%, 8%)  ;
+}
+
+.result p {
+  margin: 0px;
+  font-family: 'PoppinsX';
+  font-size: 60px;
+}
+.result p label {
+  color: hsl(259, 100%, 65%);
+}
+
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }

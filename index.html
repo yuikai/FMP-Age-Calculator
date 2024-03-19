@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Age calculator app</title>
+
+  <!-- development version, includes helpful console warnings -->
+  <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+  <link rel="stylesheet" type="text/css" href="./styles.css"/>
+</head>
+<body>
+  <div id="app">
+    <div class="form">
+      <div :class="states[0] ? 'normal' : 'error'">
+        <h1>D A Y</h1>
+        <input
+          placeholder="DD"
+          maxlength="2"
+          v-model.number="day"/>
+        <p class="error-message">{{ eDay }}</p>
+      </div>
+      <div :class="states[1] ? 'normal' : 'error'">
+        <h1>M O N T H</h1>
+        <input
+          placeholder="MM"
+          maxlength="2"
+          v-model.number="month"/>
+        <p class="error-message">{{ eMonth }}</p>
+      </div>
+      <div :class="states[2] ? 'normal' : 'error'">
+        <h1>Y E A R</h1>
+        <input
+          placeholder="YYYY"
+          maxlength="4"
+          v-model.number="year"/>
+        <p class="error-message">{{ eYear }}</p>
+      </div>
+    </div>
+    <div class="break">
+      <label><hr/></label>
+      <div @click="calculate"><img src="./assets/images/icon-arrow.svg"/></div>
+    </div>
+    <div class="result">
+      <p><label>{{ rYear }}</label> years</p>
+      <p><label>{{ rMonth }}</label> months</p>
+      <p><label>{{ rDay }}</label> days</p>
+    </div>
+  </div>
+
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">uKai</a>.
+  </div>
+
+  <script src="./main.js"></script>
+</body>
+</html>
