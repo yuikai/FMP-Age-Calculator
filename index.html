@@ -15,7 +15,7 @@
 <body>
   <div id="app">
     <div class="form">
-      <div :class="states[0] ? 'normal' : 'error'">
+      <div :class="valid[0] ? 'normal' : 'error'">
         <h1>D A Y</h1>
         <input
           placeholder="DD"
@@ -23,7 +23,7 @@
           v-model.number="day"/>
         <p class="error-message">{{ eDay }}</p>
       </div>
-      <div :class="states[1] ? 'normal' : 'error'">
+      <div :class="valid[1] ? 'normal' : 'error'">
         <h1>M O N T H</h1>
         <input
           placeholder="MM"
@@ -31,7 +31,7 @@
           v-model.number="month"/>
         <p class="error-message">{{ eMonth }}</p>
       </div>
-      <div :class="states[2] ? 'normal' : 'error'">
+      <div :class="valid[2] ? 'normal' : 'error'">
         <h1>Y E A R</h1>
         <input
           placeholder="YYYY"
@@ -42,7 +42,7 @@
     </div>
     <div class="break">
       <label><hr/></label>
-      <div @click="calculate"><img src="./assets/images/icon-arrow.svg"/></div>
+      <div @click="calculate"><img src="./assets/images/icon-arrow.svg" alt="Submit"/></div>
     </div>
     <div class="result">
       <p><label>{{ rYear }}</label> years</p>
